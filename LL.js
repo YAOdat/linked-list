@@ -8,9 +8,7 @@
 // Make sure to create a tests file to test if your code works without problem .
 
 
-
 const Node = require('./node');
-
 
 
 class LinkedList {
@@ -25,14 +23,13 @@ class LinkedList {
         this.size++;
       }
 
-
     // Add nodes to the end of the LL.
 
       append(value) {
         let newNode = new Node(value);
         let current;
     
-        // If empty, make head
+        // If empty
         if (!this.head) {
           this.head = newNode;
         } else {
@@ -86,14 +83,13 @@ class LinkedList {
     
 
    
-
     // To delete the middle node
     deleteMiddle() {
         if(!this.head) {
             return null;
         } if (this.head.next == null){
             this.head = null;
-            return null
+            return null;
         } else {
             // console.log(this.size)
             // console.log(Math.ceil(this.size/2))
@@ -110,10 +106,6 @@ class LinkedList {
         }
     }
 
-
-}
-
-
-
+};
 
 module.exports = LinkedList;
